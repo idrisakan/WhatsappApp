@@ -127,11 +127,7 @@ const ChatItem: React.FC<ChatItemProps> = ({item}) => {
                 flexDirection: 'row',
                 alignItems: 'center',
               }}>
-              <Ionicons
-                name="checkmark-done-outline"
-                size={20}
-                color={Colors.BLUE_1}
-              />
+              3
               <Text
                 numberOfLines={2}
                 style={{

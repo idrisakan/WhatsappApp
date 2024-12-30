@@ -115,7 +115,7 @@ const ChatRoom: React.FC = ({route}) => {
             textAlign: 'center',
             color: Colors.BLACK,
           }}>
-          mesaj geldi
+          Mesajlar ve aramalar uçtan uca şifrelidir
         </Text>
       </View>
     );

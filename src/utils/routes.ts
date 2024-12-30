@@ -11,3 +11,4 @@ export const COUNTRIESCODE = 'Select Country';
 export const CONTACTS = 'Contacts';
 export const EDITPROFILE = 'Edit Profile';
 export const USERCALL = 'End-to-End Encripted';
+export const WHATSAPPSTATUS = 'Whatsapp Status';

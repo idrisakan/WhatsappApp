@@ -11,6 +11,7 @@ import {
   TABNAVIGATOR,
   USERCALL,
   USERREGISTIRETIONINFO,
+  WHATSAPPSTATUS,
 } from '../utils/routes';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import TabNavigation from './tabNavigation';
@@ -26,6 +27,9 @@ import SignInWithPhone from '../screens/auth/signInWithPhone';
 import UserCall from '../screens/calls/userCall';
 import Colors from '../theme/Colors';
 import FontAwesome6 from 'react-native-vector-icons/FontAwesome6';
+import WhatsappStatus from '../screens/whatsappStatus';
+import Ionicons from 'react-native-vector-icons/Ionicons';
+
 const RootNavigation: React.FC = () => {
   const {phoneNumber, selectedCountry} = useSelector(state => state.auth);
   const Stack = createNativeStackNavigator();
@@ -78,6 +82,28 @@ const RootNavigation: React.FC = () => {
       <Stack.Screen name={EDITPROFILE} component={EditProfile} />
       <Stack.Screen name={COUNTRIESCODE} component={CountriesCode} />
       <Stack.Screen name={CONTACTS} component={Contacts} />
+      <Stack.Screen
+        options={{
+          headerShown: true,
+          headerStyle: {
+            backgroundColor: '#FF8A8C',
+          },
+          headerTintColor: Colors.WHITE,
+          headerRight: () => (
+            <Pressable style={{flexDirection: 'row'}}>
+              <Ionicons
+                name="color-palette-outline"
+                size={30}
+                color={Colors.WHITE}
+                style={{right: 15}}
+              />
+              <FontAwesome6 name="font" size={30} color={Colors.WHITE} />
+            </Pressable>
+          ),
+        }}
+        name={WHATSAPPSTATUS}
+        component={WhatsappStatus}
+      />
 
       <Stack.Screen
         options={{
@@ -93,6 +119,7 @@ const RootNavigation: React.FC = () => {
             backgroundColor: Colors.BLACK,
           },
           headerTintColor: Colors.WHITE,
+          headerTitle: () => null, // Başlık kısmını gizler
           headerRight: () => (
             <Pressable>
               <FontAwesome6 name="user-plus" size={22} color={Colors.WHITE} />

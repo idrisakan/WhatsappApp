@@ -37,9 +37,9 @@ const TabNavigation: React.FC = () => {
         tabBarActiveTintColor: Colors.BLUE_1,
         tabBarInactiveTintColor: Colors.GRAY_1,
       })}>
-      <Tab.Screen name={CONTACTS} component={MyContacts} />
-      <Tab.Screen name={CALLS} component={Calls} />
       <Tab.Screen name={STATUS} component={Status} />
+      <Tab.Screen name={CALLS} component={Calls} />
+      <Tab.Screen name={CONTACTS} component={MyContacts} />
       <Tab.Screen
         // options={({navigation}) => ({
         //   headerRight: () => (
